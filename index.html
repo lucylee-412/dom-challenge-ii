@@ -7,21 +7,42 @@
     <title>Assignment #4</title>
 </head>
 <body>
-    <!-- Prompt 1 -->
-    <button id="left"></button>
-    <button id="right"></button>
+    <!-- 1 -->
+    <h2>Prompt 1</h2>
+    <button id="left" onclick="whoIsRight(left, `I'm right!`)"> >_> </button>
+    <span id="who-is-right"></span>
+    <button id="right" onclick="whoIsRight(right, `No, I'm right!`)"> &lt_< </button>
 
-    <!-- Prompt 2 -->
-    Don't hover over me. >:(
+    <!-- 2 -->
+    <h2>Prompt 2</h2>
+    <div id="nover">
+        Don't hover over me. >:(
+    </div>
 
-    <!-- Prompt 3 -->
-    <form>
+    <!-- 3 -->
+    <h2>Prompt 3</h2>
+    <form name="prompt3" onsubmit="return numericalPass()" method="post">
+        <label for="user">Username:</label><br>
+        <input type="text" id="user" name="user"><br><br>
 
+        <label for="pass">Password:</label><br>
+        <input type="text" id="pass" name="pass"><br><br>
+
+        <label for="email">Email address:</label><br>
+        <input type="email" id="email" name="email" placeholder="yourname@example.com"><br><br>
+
+        <input type="submit" value="Submit">
     </form>
 
-    <!-- Bonus Prompt -->
-    <form>
+    <h1 id="correct-pass"></h1>
 
+    <!-- Bonus -->
+    <h2>Bonus Prompt</h2>
+    <form name="promptBonus" onsubmit="return numericalPass()" method="post">
+        <label for="radius">Input the value of a sphere's radius:</label><br>
+        <input type="text" id="radius" name="radius"><br><br>
+
+        <input type="submit" value="Submit">
     </form>
 
     <script src="script.js"></script>
